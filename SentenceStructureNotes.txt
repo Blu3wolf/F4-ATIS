@@ -1,0 +1,33 @@
+ATC Tasks
+ATIS frequency (automatically generated from Falcon WX) – if WDP can get this info, so can an ATIS program. ATIS program needs to also connect to IVC and talk on a set frequency. 
+
+[KUNSAN] INFORMATION [ALPHA] [1][3][5][5] ZULU WEATHER. WIND [2][1][0] DEGREES, [1][4] KNOTS, VISIBILITY [UNLIMITED]. [FEW] [8] [THOUSAND] FEET, TEMPERATURE [1][5], DEWPOINT [3], ALTIMETER [2][9][9][7]. DEPARTURES RWY [3][6], TRANSITION LEVEL [1][4][0], , , , , CONTACT APPROACH ON [3][0][7] DECIMAL [3] END OF INFORMATION [ALPHA]
+
+{Intro}
+[Airport ID] INFORMATION [Info ID Letter] [Time of generation] ZULU. WIND [WindDirection] AT [WindSpeed] KNOTS, VISIBILITY [VisDistance]. 
+
+{Clouds}
+[CloudType][CloudAltitude] FEET, [CloudType][CloudAltitude] FEET, [CloudType][CloudAltitude] FEET.
+
+{Atmo}
+TEMPERATURE [Temp], DEWPOINT [Dew], ALTIMETER [Hg].
+
+{Procedure}
+{If Towered} + 
+{If single runway}
+IFR APPROACHES ARE [AllowApp] TO RUNWAY [AppRwyDir], TRANSITION LEVEL [TL] CONTACT APPROACH ON [AppFreq].
+
+{If Multiple Runways}
+IFR APPROACHES ARE [AllowApp] TO RUNWAY [AppRwyDir], TRANSITION LEVEL [TL] CONTACT APPROACH ON [AppFreq]. DEPARTURES ARE [AllowDep] FROM RUNWAY [DepRwyDir], TRANSITION ALTITUDE [TA] CONTACT DEPARTURES ON [DepFreq]. 
+
+{If VMC}
+VFR TRAFFIC ADVISE DIRECTION OF FLIGHT.
+
+{If nontowered}
+OVERFLY CIRCUIT AT TWO THOUSAND FEET AGL BEFORE ENTERING DOWNWIND, ANNOUNCE TEN MILES OVER CTAF ON [AdvFreq]
+
+{Spins}
+ALL AIRCRAFT READ BACK ALL HOLD SHORT INSTRUCTIONS
+
+{End}
+END OF INFORMATION [Info ID Letter].
