@@ -36,5 +36,11 @@ namespace F4_ATIS_Client
         {
 
         }
+
+        private void aboutF4ATISToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var about = new AboutBox1();
+            about.Show();
+        }
     }
 }

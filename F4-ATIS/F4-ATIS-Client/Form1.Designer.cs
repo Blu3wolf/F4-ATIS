@@ -41,10 +41,15 @@
             this.transitionAltitudeCheckBox = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectTheaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectVoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blu3wolfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voiceActorSuckerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutF4ATISToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.airportLabel = new System.Windows.Forms.Label();
             this.infoLetterLabel = new System.Windows.Forms.Label();
             this.activeRwyLabel = new System.Windows.Forms.Label();
@@ -53,11 +58,6 @@
             this.updateATISButton = new System.Windows.Forms.Button();
             this.stopATISButton = new System.Windows.Forms.Button();
             this.serverControlsLabel = new System.Windows.Forms.Label();
-            this.blu3wolfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.voiceActorSuckerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutF4ATISToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,6 +172,12 @@
             this.connectToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.connectToolStripMenuItem.Text = "Connect";
             // 
+            // toServerToolStripMenuItem
+            // 
+            this.toServerToolStripMenuItem.Name = "toServerToolStripMenuItem";
+            this.toServerToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.toServerToolStripMenuItem.Text = "To Server...";
+            // 
             // selectToolStripMenuItem
             // 
             this.selectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -184,7 +190,7 @@
             // selectTheaterToolStripMenuItem
             // 
             this.selectTheaterToolStripMenuItem.Name = "selectTheaterToolStripMenuItem";
-            this.selectTheaterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.selectTheaterToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.selectTheaterToolStripMenuItem.Text = "Theater...";
             this.selectTheaterToolStripMenuItem.Click += new System.EventHandler(this.selectTheaterToolStripMenuItem_Click);
             // 
@@ -194,14 +200,43 @@
             this.blu3wolfToolStripMenuItem,
             this.voiceActorSuckerToolStripMenuItem});
             this.selectVoiceToolStripMenuItem.Name = "selectVoiceToolStripMenuItem";
-            this.selectVoiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.selectVoiceToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.selectVoiceToolStripMenuItem.Text = "Voice...";
             // 
-            // toServerToolStripMenuItem
+            // blu3wolfToolStripMenuItem
             // 
-            this.toServerToolStripMenuItem.Name = "toServerToolStripMenuItem";
-            this.toServerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.toServerToolStripMenuItem.Text = "To Server...";
+            this.blu3wolfToolStripMenuItem.Name = "blu3wolfToolStripMenuItem";
+            this.blu3wolfToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.blu3wolfToolStripMenuItem.Text = "Blu3wolf";
+            // 
+            // voiceActorSuckerToolStripMenuItem
+            // 
+            this.voiceActorSuckerToolStripMenuItem.Name = "voiceActorSuckerToolStripMenuItem";
+            this.voiceActorSuckerToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.voiceActorSuckerToolStripMenuItem.Text = "Voice Actor Sucker";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.aboutF4ATISToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Text = "View Help";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // aboutF4ATISToolStripMenuItem
+            // 
+            this.aboutF4ATISToolStripMenuItem.Name = "aboutF4ATISToolStripMenuItem";
+            this.aboutF4ATISToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutF4ATISToolStripMenuItem.Text = "About F4-ATIS";
+            this.aboutF4ATISToolStripMenuItem.Click += new System.EventHandler(this.aboutF4ATISToolStripMenuItem_Click);
             // 
             // airportLabel
             // 
@@ -275,40 +310,6 @@
             this.serverControlsLabel.Size = new System.Drawing.Size(82, 13);
             this.serverControlsLabel.TabIndex = 20;
             this.serverControlsLabel.Text = "Server Controls:";
-            // 
-            // blu3wolfToolStripMenuItem
-            // 
-            this.blu3wolfToolStripMenuItem.Name = "blu3wolfToolStripMenuItem";
-            this.blu3wolfToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.blu3wolfToolStripMenuItem.Text = "Blu3wolf";
-            // 
-            // voiceActorSuckerToolStripMenuItem
-            // 
-            this.voiceActorSuckerToolStripMenuItem.Name = "voiceActorSuckerToolStripMenuItem";
-            this.voiceActorSuckerToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.voiceActorSuckerToolStripMenuItem.Text = "Voice Actor Sucker";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem,
-            this.aboutF4ATISToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem.Text = "View Help";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // aboutF4ATISToolStripMenuItem
-            // 
-            this.aboutF4ATISToolStripMenuItem.Name = "aboutF4ATISToolStripMenuItem";
-            this.aboutF4ATISToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutF4ATISToolStripMenuItem.Text = "About F4-ATIS";
             // 
             // Form1
             // 
