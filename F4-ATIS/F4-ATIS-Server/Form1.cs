@@ -22,7 +22,7 @@ namespace F4_ATIS_Server
         EditATISForm Edit;
 
         // Declare about class and instantiate aboutbox
-        var about = new AboutBox1();
+        AboutBox1 about = new AboutBox1();
 
         public Form1()
         {
