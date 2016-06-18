@@ -58,6 +58,7 @@
             this.updateATISButton = new System.Windows.Forms.Button();
             this.stopATISButton = new System.Windows.Forms.Button();
             this.serverControlsLabel = new System.Windows.Forms.Label();
+            this.startATISButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -227,14 +228,14 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.aboutToolStripMenuItem.Text = "View Help";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // aboutF4ATISToolStripMenuItem
             // 
             this.aboutF4ATISToolStripMenuItem.Name = "aboutF4ATISToolStripMenuItem";
-            this.aboutF4ATISToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutF4ATISToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.aboutF4ATISToolStripMenuItem.Text = "About F4-ATIS";
             this.aboutF4ATISToolStripMenuItem.Click += new System.EventHandler(this.aboutF4ATISToolStripMenuItem_Click);
             // 
@@ -295,11 +296,11 @@
             // 
             // stopATISButton
             // 
-            this.stopATISButton.Location = new System.Drawing.Point(282, 176);
+            this.stopATISButton.Location = new System.Drawing.Point(340, 176);
             this.stopATISButton.Name = "stopATISButton";
             this.stopATISButton.Size = new System.Drawing.Size(75, 23);
             this.stopATISButton.TabIndex = 19;
-            this.stopATISButton.Text = "Stop";
+            this.stopATISButton.Text = "Stop ATIS";
             this.stopATISButton.UseVisualStyleBackColor = true;
             // 
             // serverControlsLabel
@@ -311,11 +312,21 @@
             this.serverControlsLabel.TabIndex = 20;
             this.serverControlsLabel.Text = "Server Controls:";
             // 
+            // startATISButton
+            // 
+            this.startATISButton.Location = new System.Drawing.Point(259, 176);
+            this.startATISButton.Name = "startATISButton";
+            this.startATISButton.Size = new System.Drawing.Size(75, 23);
+            this.startATISButton.TabIndex = 21;
+            this.startATISButton.Text = "Start ATIS";
+            this.startATISButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 211);
+            this.Controls.Add(this.startATISButton);
             this.Controls.Add(this.serverControlsLabel);
             this.Controls.Add(this.stopATISButton);
             this.Controls.Add(this.updateATISButton);
@@ -378,6 +389,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutF4ATISToolStripMenuItem;
+        private System.Windows.Forms.Button startATISButton;
     }
 }
 

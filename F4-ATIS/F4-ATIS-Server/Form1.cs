@@ -21,5 +21,22 @@ namespace F4_ATIS_Server
         {
 
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var about = new AboutBox1();
+            about.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var editprompt = new EditATISForm();
+            editprompt.Show();
+        }
+
+        private void messageTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
