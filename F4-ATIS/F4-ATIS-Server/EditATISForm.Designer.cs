@@ -127,7 +127,7 @@
             this.editCloseButton.Name = "editCloseButton";
             this.editCloseButton.Size = new System.Drawing.Size(75, 23);
             this.editCloseButton.TabIndex = 4;
-            this.editCloseButton.Text = "Close";
+            this.editCloseButton.Text = "Cancel";
             this.editCloseButton.UseVisualStyleBackColor = true;
             this.editCloseButton.Click += new System.EventHandler(this.closeButton_Click);
             // 

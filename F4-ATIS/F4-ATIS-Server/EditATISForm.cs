@@ -21,15 +21,27 @@ namespace F4_ATIS_Server
         // declare ATIS message string
         StringBuilder msgATISString = new StringBuilder("This should import the value from msgList which in turn should import the value from the Server form");
         
-        public EditATISForm()
+        public EditATISForm(List<string> mainMsgList)
         {
-            msgList = new List<string>(mainForm.msgList);
-
-            BuildATISString(msgList, msgATISString, messageTextBox);
             InitializeComponent();
+            PopulatemsgList(mainMsgList);
         }
 
-        public void BuildATISString(List<String> msgList, StringBuilder msgATISString, TextBox txtbox)
+        public void PopulatemsgList(List<string> mainMsgList)
+        {
+            // instantiate msgList
+            msgList = new List<string>();
+
+            foreach (string word in mainMsgList)
+            {
+                msgList.Add(word);
+            }
+
+            // Build the msgATISString based on the new msgList
+            BuildATISString(msgList, msgATISString, messageTextBox);
+        }
+
+        public void BuildATISString(List<String> msgList, StringBuilder msgATISString, TextBox messageTextBox)
         {
             // Clear the existing string, add each word in the msgList to the string, put the string in the messagebox.
             msgATISString.Clear();
@@ -38,7 +50,7 @@ namespace F4_ATIS_Server
                 msgATISString.Append(word);
                 msgATISString.Append(" ");
             }
-            txtbox.Text = msgATISString.ToString();
+            messageTextBox.Text = msgATISString.ToString();
         }
 
         private void closeButton_Click(object sender, EventArgs e)

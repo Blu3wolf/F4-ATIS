@@ -85,7 +85,6 @@
             this.messageTextBox.ReadOnly = true;
             this.messageTextBox.Size = new System.Drawing.Size(436, 134);
             this.messageTextBox.TabIndex = 1;
-            this.messageTextBox.Text = "Server Status: Unprogrammed!\r\n\r\nLorem ipsum (ATIS Message Here)";
             this.messageTextBox.TextChanged += new System.EventHandler(this.messageTextBox_TextChanged);
             // 
             // editATISButton
@@ -106,6 +105,7 @@
             this.stopATISButton.TabIndex = 3;
             this.stopATISButton.Text = "Stop ATIS";
             this.stopATISButton.UseVisualStyleBackColor = true;
+            this.stopATISButton.Click += new System.EventHandler(this.stopATISButton_Click);
             // 
             // startATISButton
             // 

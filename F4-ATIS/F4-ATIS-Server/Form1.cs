@@ -12,7 +12,7 @@ namespace F4_ATIS_Server
 {
     public partial class Form1 : Form
     {
-        // Declare ATIS message list
+        // Declare and instantiate ATIS message list
         internal List<string> msgList = new List<string>();
 
         // Declare and Instantiate ATIS message string
@@ -21,8 +21,8 @@ namespace F4_ATIS_Server
         // Declare EditATISForm class
         EditATISForm Edit;
 
-        // Declare about class and instantiate aboutbox
-        AboutBox1 about = new AboutBox1();
+        // Declare about class aboutbox
+        AboutBox1 about;
 
         public Form1()
         {
@@ -36,12 +36,13 @@ namespace F4_ATIS_Server
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            about = new AboutBox1();
             about.Show();
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            Edit = new EditATISForm();
+            Edit = new EditATISForm(msgList);
             DialogResult dr = Edit.ShowDialog(this);
             if (dr == DialogResult.Cancel)
             {
@@ -61,6 +62,11 @@ namespace F4_ATIS_Server
         }
 
         private void startATISButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stopATISButton_Click(object sender, EventArgs e)
         {
 
         }
