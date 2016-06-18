@@ -145,103 +145,103 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Alpha.wav" />
+    <EmbeddedResource Include="Resources\Alpha.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Altimeter.wav" />
+    <EmbeddedResource Include="Resources\Altimeter.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Bravo.wav" />
+    <EmbeddedResource Include="Resources\Bravo.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Degrees.wav" />
+    <EmbeddedResource Include="Resources\Degrees.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Departures.wav" />
+    <EmbeddedResource Include="Resources\Departures.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Dewpoint.wav" />
+    <EmbeddedResource Include="Resources\Dewpoint.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Eight.wav" />
+    <EmbeddedResource Include="Resources\Eight.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Feet.wav" />
+    <EmbeddedResource Include="Resources\Feet.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Few.wav" />
+    <EmbeddedResource Include="Resources\Few.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Five.wav" />
+    <EmbeddedResource Include="Resources\Five.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Four.wav" />
+    <EmbeddedResource Include="Resources\Four.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Hundred.wav" />
+    <EmbeddedResource Include="Resources\Hundred.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Information.wav" />
+    <EmbeddedResource Include="Resources\Information.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Kilometers.wav" />
+    <EmbeddedResource Include="Resources\Kilometers.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Knots.wav" />
+    <EmbeddedResource Include="Resources\Knots.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Kunsan.wav" />
+    <EmbeddedResource Include="Resources\Kunsan.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Niner.wav" />
+    <EmbeddedResource Include="Resources\Niner.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\One.wav" />
+    <EmbeddedResource Include="Resources\One.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Pause.wav" />
+    <EmbeddedResource Include="Resources\Pause.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Runway.wav" />
+    <EmbeddedResource Include="Resources\Runway.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Scattered.wav" />
+    <EmbeddedResource Include="Resources\Scattered.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Seven.wav" />
+    <EmbeddedResource Include="Resources\Seven.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Six.wav" />
+    <EmbeddedResource Include="Resources\Six.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Temperature.wav" />
+    <EmbeddedResource Include="Resources\Temperature.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Thousand.wav" />
+    <EmbeddedResource Include="Resources\Thousand.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Three.wav" />
+    <EmbeddedResource Include="Resources\Three.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Two.wav" />
+    <EmbeddedResource Include="Resources\Two.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Unlimited.wav" />
+    <EmbeddedResource Include="Resources\Unlimited.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Visibility.wav" />
+    <EmbeddedResource Include="Resources\Visibility.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Weather.wav" />
+    <EmbeddedResource Include="Resources\Weather.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Wind.wav" />
+    <EmbeddedResource Include="Resources\Wind.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Zero.wav" />
+    <EmbeddedResource Include="Resources\Zero.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Zulu.wav" />
+    <EmbeddedResource Include="Resources\Zulu.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
