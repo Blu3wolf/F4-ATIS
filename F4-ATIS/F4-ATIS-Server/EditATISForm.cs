@@ -12,9 +12,6 @@ namespace F4_ATIS_Server
 {
     public partial class EditATISForm : Form
     {
-        // Declare mainForm
-        Form1 mainForm;
-
         // Declare msgList List that holds ATIS msg
         internal List<string> msgList;
         

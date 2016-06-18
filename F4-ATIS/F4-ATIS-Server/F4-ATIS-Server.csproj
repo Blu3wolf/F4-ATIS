@@ -98,6 +98,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -123,6 +124,124 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alpha.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Altimeter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bravo.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Degrees.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Departures.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dewpoint.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eight.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Feet.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Few.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Five.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Four.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hundred.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kilometers.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knots.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kunsan.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Niner.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\One.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Runway.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scattered.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seven.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Six.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Temperature.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thousand.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Three.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Two.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlimited.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Visibility.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weather.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wind.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zero.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zulu.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace F4_ATIS_Server
 {
@@ -63,7 +64,7 @@ namespace F4_ATIS_Server
 
         private void startATISButton_Click(object sender, EventArgs e)
         {
-
+            Player.URL = 
         }
 
         private void stopATISButton_Click(object sender, EventArgs e)
