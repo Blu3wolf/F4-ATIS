@@ -64,12 +64,29 @@ namespace F4_ATIS_Server
 
         private void startATISButton_Click(object sender, EventArgs e)
         {
-            Player.URL = 
+            
         }
 
         private void stopATISButton_Click(object sender, EventArgs e)
         {
+            WMPlayer.Ctlcontrols.stop();
+        }
 
+        private void WMPlayer_MediaError(object sender, AxWMPLib._WMPOCXEvents_MediaErrorEvent e)
+        {
+            try
+            // If the player encounters a corrupt or missing file, 
+            // show the hexadecimal error code and URL.
+            {
+                IWMPMedia2 errSource = e.pMediaObject as IWMPMedia2;
+                IWMPErrorItem errorItem = errSource.Error;
+                MessageBox.Show("Error " + errorItem.errorCode.ToString("X") + " in " + errSource.sourceURL);
+            }
+            catch (InvalidCastException)
+            // In case pMediaObject is not an IWMPMedia item.
+            {
+                MessageBox.Show("Error.");
+            }
         }
     }
 }
