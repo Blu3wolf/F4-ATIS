@@ -12,6 +12,18 @@ namespace F4_ATIS_Server
 {
     public partial class Form1 : Form
     {
+        // Declare ATIS message list
+        internal List<string> msgList = new List<string>();
+
+        // Declare and Instantiate ATIS message string
+        StringBuilder msgATISString = new StringBuilder();
+
+        // Declare EditATISForm class
+        EditATISForm Edit;
+
+        // Declare about class and instantiate aboutbox
+        var about = new AboutBox1();
+
         public Form1()
         {
             InitializeComponent();
@@ -24,14 +36,23 @@ namespace F4_ATIS_Server
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var about = new AboutBox1();
             about.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void editButton_Click(object sender, EventArgs e)
         {
-            var editprompt = new EditATISForm();
-            editprompt.Show();
+            Edit = new EditATISForm();
+            DialogResult dr = Edit.ShowDialog(this);
+            if (dr == DialogResult.Cancel)
+            {
+                Edit.Close();
+            }
+            else if (dr == DialogResult.OK)
+            {
+                msgList = Edit.msgList;
+                Edit.BuildATISString(msgList, msgATISString, messageTextBox);
+                Edit.Close();
+            }
         }
 
         private void messageTextBox_TextChanged(object sender, EventArgs e)

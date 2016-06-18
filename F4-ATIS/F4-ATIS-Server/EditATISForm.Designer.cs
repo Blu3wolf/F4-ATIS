@@ -122,6 +122,7 @@
             // 
             // editCloseButton
             // 
+            this.editCloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.editCloseButton.Location = new System.Drawing.Point(612, 3);
             this.editCloseButton.Name = "editCloseButton";
             this.editCloseButton.Size = new System.Drawing.Size(75, 23);
@@ -132,6 +133,7 @@
             // 
             // applyATISButton
             // 
+            this.applyATISButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.applyATISButton.Location = new System.Drawing.Point(531, 3);
             this.applyATISButton.Name = "applyATISButton";
             this.applyATISButton.Size = new System.Drawing.Size(75, 23);

@@ -12,242 +12,247 @@ namespace F4_ATIS_Server
 {
     public partial class EditATISForm : Form
     {
-        // Create msgList List that holds ATIS msg
-        List<string> msgList = new List<string>();
+        // Declare mainForm
+        Form1 mainForm;
 
-        // Declare meaning of msgList words
-        // enum Words { Kunsan, information, alpha, bravo, zulu, weather, comma, wind, degrees, knots, visibility, unlimited, kilometers, few, scattered, feet, temperature, dewpoint, altimeter, departures, runway, one, two, three, four, five, six, seven, eight, niner, zero, hundred, thousand };
-
-        // declare existing ATIS message
+        // Declare msgList List that holds ATIS msg
+        internal List<string> msgList;
+        
+        // declare ATIS message string
         StringBuilder msgATISString = new StringBuilder("This should import the value from msgList which in turn should import the value from the Server form");
-
+        
         public EditATISForm()
         {
+            msgList = new List<string>(mainForm.msgList);
+
+            BuildATISString(msgList, msgATISString, messageTextBox);
             InitializeComponent();
         }
 
-        public void BuildATISString()
+        public void BuildATISString(List<String> msgList, StringBuilder msgATISString, TextBox txtbox)
         {
+            // Clear the existing string, add each word in the msgList to the string, put the string in the messagebox.
             msgATISString.Clear();
             foreach (string word in msgList)
             {
                 msgATISString.Append(word);
+                msgATISString.Append(" ");
             }
-            messageTextBox.Text = msgATISString.ToString();
+            txtbox.Text = msgATISString.ToString();
         }
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
         private void clearATISButton_Click(object sender, EventArgs e)
         {
             msgList.Clear();
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void applyATISButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void kunsanButton_Click(object sender, EventArgs e)
         {
             msgList.Add("Kunsan");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void windButton_Click(object sender, EventArgs e)
         {
             msgList.Add("wind");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void informationButton_Click(object sender, EventArgs e)
         {
             msgList.Add("information");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void alphaButton_Click(object sender, EventArgs e)
         {
             msgList.Add("alpha");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void bravoButton_Click(object sender, EventArgs e)
         {
             msgList.Add("bravo");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void zuluButton_Click(object sender, EventArgs e)
         {
             msgList.Add("zulu");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
         {
             msgList.Add("weather");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void pauseButton_Click(object sender, EventArgs e)
         {
             msgList.Add("pause");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void degreesButton_Click(object sender, EventArgs e)
         {
             msgList.Add("degrees");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void knotsButton_Click(object sender, EventArgs e)
         {
             msgList.Add("knots");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void visibilityButton_Click(object sender, EventArgs e)
         {
             msgList.Add("visibility");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void unlimitedButton_Click(object sender, EventArgs e)
         {
             msgList.Add("unlimited");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void kilometersButton_Click(object sender, EventArgs e)
         {
             msgList.Add("kilometers");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void fewButton_Click(object sender, EventArgs e)
         {
             msgList.Add("few");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void scatteredButton_Click(object sender, EventArgs e)
         {
             msgList.Add("scattered");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void feetButton_Click(object sender, EventArgs e)
         {
             msgList.Add("feet");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void temperatureButton_Click(object sender, EventArgs e)
         {
             msgList.Add("temperature");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void dewpointButton_Click(object sender, EventArgs e)
         {
             msgList.Add("dewpoint");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void altimeterButton_Click(object sender, EventArgs e)
         {
             msgList.Add("altimeter");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void departuresButton_Click(object sender, EventArgs e)
         {
             msgList.Add("departures");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void runwayButton_Click(object sender, EventArgs e)
         {
             msgList.Add("runway");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void oneButton_Click(object sender, EventArgs e)
         {
             msgList.Add("one");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void twoButton_Click(object sender, EventArgs e)
         {
             msgList.Add("two");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void threeButton_Click(object sender, EventArgs e)
         {
             msgList.Add("three");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void fourButton_Click(object sender, EventArgs e)
         {
             msgList.Add("four");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void fiveButton_Click(object sender, EventArgs e)
         {
             msgList.Add("five");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void sixButton_Click(object sender, EventArgs e)
         {
             msgList.Add("six");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void sevenButton_Click(object sender, EventArgs e)
         {
             msgList.Add("seven");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void eightButton_Click(object sender, EventArgs e)
         {
             msgList.Add("eight");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void nineButton_Click(object sender, EventArgs e)
         {
             msgList.Add("nine");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void zeroButton_Click(object sender, EventArgs e)
         {
             msgList.Add("zero");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void hundredButton_Click(object sender, EventArgs e)
         {
             msgList.Add("hundred");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
 
         private void thousandButton_Click(object sender, EventArgs e)
         {
             msgList.Add("thousand");
-            BuildATISString();
+            BuildATISString(msgList, msgATISString, messageTextBox);
         }
     }
 }

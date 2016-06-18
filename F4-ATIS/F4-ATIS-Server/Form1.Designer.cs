@@ -96,7 +96,7 @@
             this.editATISButton.TabIndex = 2;
             this.editATISButton.Text = "Edit ATIS";
             this.editATISButton.UseVisualStyleBackColor = true;
-            this.editATISButton.Click += new System.EventHandler(this.button1_Click);
+            this.editATISButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // stopATISButton
             // 
