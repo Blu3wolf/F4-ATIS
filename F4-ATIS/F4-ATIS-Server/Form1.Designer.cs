@@ -115,6 +115,7 @@
             this.startATISButton.TabIndex = 4;
             this.startATISButton.Text = "Start ATIS";
             this.startATISButton.UseVisualStyleBackColor = true;
+            this.startATISButton.Click += new System.EventHandler(this.startATISButton_Click);
             // 
             // tableLayoutPanel1
             // 

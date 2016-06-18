@@ -38,5 +38,10 @@ namespace F4_ATIS_Server
         {
 
         }
+
+        private void startATISButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
