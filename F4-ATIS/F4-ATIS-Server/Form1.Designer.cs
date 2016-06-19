@@ -158,6 +158,7 @@
             this.Player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Player.OcxState")));
             this.Player.Size = new System.Drawing.Size(75, 23);
             this.Player.TabIndex = 5;
+            this.Player.Visible = false;
             this.Player.MediaError += new AxWMPLib._WMPOCXEvents_MediaErrorEventHandler(this.WMPlayer_MediaError);
             // 
             // Form1

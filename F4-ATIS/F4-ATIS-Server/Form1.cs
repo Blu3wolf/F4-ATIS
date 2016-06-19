@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.IO;
 
 namespace F4_ATIS_Server
 {
@@ -45,7 +46,7 @@ namespace F4_ATIS_Server
 
         private void buildDictionary()
         {
-            // Create playlist to hold Dictionary
+            // Create playlists to hold Dictionary and message
             dictionary = Player.newPlaylist("Dictionary", null);
 
             playlist = Player.newPlaylist("ATIS", null);
@@ -56,21 +57,21 @@ namespace F4_ATIS_Server
             for (int i = 0; i < length; i++)
             {
                 words word = (words)i;
-                string addr = "F4_ATIS_Server.Properties.Resources." + word.ToString();
-                IWMPMedia clip = Player.newMedia(addr);
-                clip.name = word.ToString();
-                dictionary.appendItem(clip);
+                string addr = @"Resources\" + word.ToString() + ".wav";
+                if (File.Exists(addr))
+                {
+                    IWMPMedia clip = Player.newMedia(addr);
+                    clip.name = word.ToString();
+                    dictionary.appendItem(clip);
+                }
+                else
+                {
+                    MessageBox.Show("Could not find the file " + addr);
+                    break;
+                }
             }
-        }
-
-        private void blankPlaylist()
-        {
-            int length = playlist.count;
-            for (int i = 0; i < length; i++)
-            {
-                IWMPMedia item = playlist.Item[0];
-                playlist.removeItem(item);
-            }
+            Player.settings.setMode("loop", true);
+            Player.settings.autoStart = false;
         }
 
         private void buildPlaylist()
@@ -84,11 +85,28 @@ namespace F4_ATIS_Server
             {
                 IWMPMedia clip;
                 words word = (words)number;
-                string addr = "F4_ATIS_Server.Properties.Resources." + word.ToString();
-                clip = Player.newMedia(addr);
-                clip.name = word.ToString();
-                playlist.appendItem(clip);
+                IWMPMedia dword = dictionary.get_Item(number);
+                if (dword.name == word.ToString())
+                {
+                    playlist.appendItem(dword);
+                }
+                else
+                {
+                    string addr = @"Resources\" + word.ToString() + ".wav";
+                    clip = Player.newMedia(addr);
+                    clip.name = word.ToString();
+                    playlist.appendItem(clip);
+                }
             }
+            Player.currentPlaylist = playlist;
+        }
+
+        private void blankPlaylist()
+        {
+            // Easiest way to blank the playlist is to rename the existing one
+            // and just create a new one with the same name as the old one.
+            playlist.name = "meh";
+            playlist = Player.newPlaylist("ATIS", null);
         }
         
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -121,7 +139,11 @@ namespace F4_ATIS_Server
 
         private void startATISButton_Click(object sender, EventArgs e)
         {
-            Player.Ctlcontrols.play();
+            if (Player.currentPlaylist.count != 0)
+            {
+                IWMPMedia media = Player.currentPlaylist.get_Item(0);
+                Player.Ctlcontrols.playItem(media);
+            }
         }
 
         private void stopATISButton_Click(object sender, EventArgs e)
